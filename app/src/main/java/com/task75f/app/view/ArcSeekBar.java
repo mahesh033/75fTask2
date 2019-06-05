@@ -127,8 +127,8 @@ public class ArcSeekBar extends View {
             if (thumb != null) {
                 mThumb = thumb;
             }
-            thumbHalfHeight = mThumb.getIntrinsicHeight() / 2;
-            thumbHalfWidth = mThumb.getIntrinsicWidth() / 2;
+            thumbHalfHeight = (mThumb.getIntrinsicHeight() / 2) + 2;
+            thumbHalfWidth = (mThumb.getIntrinsicWidth() / 2) + 2;
             mThumb.setBounds(-thumbHalfWidth, -thumbHalfHeight, thumbHalfWidth, thumbHalfHeight);
 
             //Dimensions
