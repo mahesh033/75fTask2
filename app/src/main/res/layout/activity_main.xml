@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@color/progress_gray"
     tools:context=".MainActivity">
 
@@ -56,7 +56,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_marginTop="180dp"
         android:gravity="center">
 
         <ImageView
@@ -74,7 +74,7 @@
             android:layout_centerInParent="true"
             android:text="@string/default_progress"
             android:textColor="@color/default_gray"
-            android:textSize="120sp"/>
+            android:textSize="40sp"/>
 
         <ImageView
             android:layout_width="70dp"
@@ -90,10 +90,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:scaleX="-1"
-        android:scaleY="1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>

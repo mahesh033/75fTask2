@@ -15,8 +15,6 @@ import com.task75f.app.view.ArcSeekBar;
  */
 public class MainActivity extends AppCompatActivity {
 
-    //
-    private ArcSeekBar mArcSeekBar;
     private TextView mProgress;
 
     @Override
@@ -28,7 +26,8 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         mProgress = findViewById(R.id.progress);
-        mArcSeekBar = findViewById(R.id.arch);
+        //
+        ArcSeekBar arcSeekBar = findViewById(R.id.arch);
 
         findViewById(R.id.homeBack).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,28 +36,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mArcSeekBar.setAngle(50);
-        mArcSeekBar.setOnProtractorViewChangeListener(new ArcSeekBar.OnProtractorViewChangeListener() {
+        arcSeekBar.setOnSeekArcChangeListener(new ArcSeekBar.OnSeekArcChangeListener() {
             @Override
-            public void onProgressChanged(ArcSeekBar protractorView, int progress, boolean fromUser) {
-                mProgress.setText(String.valueOf(progress));
-
-                if (progress == 100) {
-                    mArcSeekBar.setArcBackgroundPaintColor(getResources().getColor(R.color.default_red), progress);
-                } else if (progress == 50) {
-                    mArcSeekBar.setArcBackgroundPaintColor(getResources().getColor(R.color.default_blue), progress);
-                } else {
-                    mArcSeekBar.setArcBackgroundPaintColor(getResources().getColor(R.color.default_red), progress);
-                }
+            public void onProgressChanged(ArcSeekBar seekArc, float progress) {
+                mProgress.setText(String.valueOf(Math.round(progress)));
             }
 
             @Override
-            public void onStartTrackingTouch(ArcSeekBar protractorView) {
+            public void onStartTrackingTouch(ArcSeekBar seekArc) {
 
             }
 
             @Override
-            public void onStopTrackingTouch(ArcSeekBar protractorView) {
+            public void onStopTrackingTouch(ArcSeekBar seekArc) {
 
             }
         });

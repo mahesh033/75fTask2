@@ -1,26 +1,21 @@
 <resources>
 
-    <declare-styleable name="ProtractorView">
-        <attr name="thumb" format="reference"/>
-        <attr name="progressWidth" format="dimension"/>
-        <attr name="tickOffset" format="dimension"/>
-        <attr name="tickLength" format="dimension"/>
-        <attr name="arcWidth" format="dimension"/>
-        <attr name="angle" format="integer"/>
-        <attr name="tickIntervals" format="integer"/>
-        <attr name="arcColor" format="color"/>
-        <attr name="backgroundColor" format="color"/>
-        <attr name="arcProgressColor" format="color"/>
-        <attr name="textProgressColor" format="color"/>
-        <attr name="tickColor" format="color"/>
-        <attr name="tickProgressColor" format="color"/>
-        <attr name="roundEdges" format="boolean"/>
-        <attr name="enabled" format="boolean"/>
-        <attr name="touchInside" format="boolean"/>
-    </declare-styleable>
-
-    <declare-styleable name="ProtractorViewTheme">
-        <attr name="protractorViewStyle" format="reference"/>
+    <declare-styleable name="ShaderSeekArc">
+        <attr name="startValue" format="float"/>
+        <attr name="endValue" format="float"/>
+        <attr name="progress" format="float"/>
+        <attr name="startAngle" format="float"/>
+        <attr name="endAngle" format="float"/>
+        <attr name="arcWidthRate" format="float"/>
+        <attr name="startColor" format="integer"/>
+        <attr name="endColor" format="integer"/>
+        <attr name="showMark" format="boolean"/>
+        <attr name="markSize" format="integer"/>
+        <attr name="markColor" format="integer"/>
+        <attr name="showProgress" format="boolean"/>
+        <attr name="progressTextSize" format="integer"/>
+        <attr name="progressTextColor" format="integer"/>
+        <attr name="lineColor" format="integer"/>
     </declare-styleable>
 
 </resources>
